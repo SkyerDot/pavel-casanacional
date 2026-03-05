@@ -19,8 +19,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-3xl"
-        >
+          className="max-w-3xl">
+          
           <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-primary mb-4">
             Brooklin — São Paulo
           </p>
@@ -39,21 +39,21 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={onCtaClick}
-              className="bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity"
-            >
-              Quero Saber Mais
+              className="bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity">
+              
+              Agende uma visita 
             </button>
-            <a
-              href="#sobre"
-              className="border border-gold text-primary font-body text-sm tracking-wider uppercase px-8 py-4 text-center hover:bg-primary/10 transition-colors"
-            >
-              Conheça o Projeto
-            </a>
+            
+
+
+
+
+            
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
