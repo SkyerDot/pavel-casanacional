@@ -46,7 +46,7 @@ const StickyNav = ({ onCtaClick }: StickyNavProps) => {
           onClick={onCtaClick}
           className="bg-gold-gradient text-primary-foreground font-body font-semibold text-xs tracking-wider uppercase px-5 py-2.5 hover:opacity-90 transition-opacity">
           
-          Agende uma visita 
+          AGENDE 
         </button>
       </div>
     </nav>);
