@@ -16,7 +16,7 @@ const StickyNav = ({ onCtaClick }: StickyNavProps) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        scrolled ? "bg-background/95 backdrop-blur-md border-b border-gold" : "bg-transparent"
+        scrolled ? "bg-background/95 backdrop-blur-md border-b border-gold" : "bg-gradient-to-b from-background/80 via-background/40 to-transparent backdrop-blur-[2px]"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8 py-4">
