@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
+import { Phone } from "lucide-react";
 
-interface StickyNavProps {
-  onCtaClick: () => void;
-}
-
-const StickyNav = ({ onCtaClick }: StickyNavProps) => {
+const StickyNav = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,21 +33,21 @@ const StickyNav = ({ onCtaClick }: StickyNavProps) => {
             key={link.href}
             href={link.href}
             className="text-xs tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors font-body">
-            
               {link.label}
             </a>
           )}
         </div>
 
-        <button
-          onClick={onCtaClick}
-          className="bg-gold-gradient text-primary-foreground font-body font-semibold text-xs tracking-wider uppercase px-5 py-2.5 hover:opacity-90 transition-opacity">
-          
-          AGENDE 
-        </button>
+        <a
+          href="tel:+5511995502261"
+          className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-body font-semibold text-sm tracking-wider"
+        >
+          <Phone className="w-4 h-4" />
+          <span className="hidden sm:inline">(11) 99550-2261</span>
+        </a>
       </div>
-    </nav>);
-
+    </nav>
+  );
 };
 
 export default StickyNav;

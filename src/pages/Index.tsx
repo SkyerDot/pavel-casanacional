@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import StickyNav from "@/components/StickyNav";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -8,25 +8,39 @@ import FloorPlansSection from "@/components/FloorPlansSection";
 import LeadFormSection from "@/components/LeadFormSection";
 import FloatingCta from "@/components/FloatingCta";
 
-const Index = () => {
-  const formRef = useRef<HTMLElement>(null);
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0";
 
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: "smooth" });
+const Index = () => {
+  const heroCtaRef = useRef<HTMLAnchorElement>(null);
+  const [showFloating, setShowFloating] = useState(false);
+
+  useEffect(() => {
+    const el = heroCtaRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowFloating(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const openWhatsApp = () => {
+    window.open(WHATSAPP_URL, "_blank");
   };
 
   return (
     <div className="bg-background min-h-screen">
-      <StickyNav onCtaClick={scrollToForm} />
-      <HeroSection onCtaClick={scrollToForm} />
+      <StickyNav />
+      <HeroSection ctaRef={heroCtaRef} />
       <AboutSection />
       <AmenitiesSection />
       <LocationSection />
-      <FloorPlansSection onCtaClick={scrollToForm} />
-      <LeadFormSection ref={formRef} />
-      <FloatingCta onClick={scrollToForm} />
+      <FloorPlansSection onCtaClick={openWhatsApp} />
+      <LeadFormSection ref={undefined} />
+      <FloatingCta visible={showFloating} />
 
-      {/* Footer */}
       <footer className="border-t border-gold py-8 px-4 text-center">
         <p className="text-xs text-muted-foreground font-body">
           Material preliminar, sujeito à alteração. Perspectivas ilustrativas. 
