@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/fachada-detail.jpg";
 
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0";
+
 interface HeroSectionProps {
-  onCtaClick: () => void;
+  ctaRef: React.RefObject<HTMLAnchorElement>;
 }
 
-const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
+const HeroSection = ({ ctaRef }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-end pb-16 md:pb-24 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="Casa Nacional EZTEC - Fachada" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
@@ -19,8 +20,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-3xl">
-          
+          className="max-w-3xl"
+        >
           <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-primary mb-4">
             Brooklin — São Paulo
           </p>
@@ -36,24 +37,19 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             Paisagismo por Burle Marx · Arquitetura por LE Arquitetos · Decoração por Fernanda Marques
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={onCtaClick}
-              className="bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity">
-              
-              Agende uma visita 
-            </button>
-            
-
-
-
-
-            
-          </div>
+          <a
+            ref={ctaRef}
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity"
+          >
+            Agende uma visita
+          </a>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default HeroSection;

@@ -10,7 +10,7 @@ const LeadFormSection = forwardRef<HTMLElement>((_, ref) => {
     e.preventDefault();
     // Build WhatsApp message
     const msg = `Olá! Tenho interesse no Casa Nacional EZTEC.\n\nNome: ${form.nome}\nTelefone: ${form.telefone}\nE-mail: ${form.email}\n${form.mensagem ? `Mensagem: ${form.mensagem}` : ""}`;
-    const waUrl = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    const waUrl = `https://api.whatsapp.com/send/?phone=5511995502261&text=${encodeURIComponent(msg)}&type=phone_number&app_absent=0`;
     window.open(waUrl, "_blank");
     setSubmitted(true);
   };
