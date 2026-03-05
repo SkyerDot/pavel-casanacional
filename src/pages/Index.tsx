@@ -5,7 +5,6 @@ import AboutSection from "@/components/AboutSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import LocationSection from "@/components/LocationSection";
 import FloorPlansSection from "@/components/FloorPlansSection";
-import LeadFormSection from "@/components/LeadFormSection";
 import FloatingCta from "@/components/FloatingCta";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0";
@@ -38,7 +37,6 @@ const Index = () => {
       <AmenitiesSection />
       <LocationSection />
       <FloorPlansSection onCtaClick={openWhatsApp} />
-      <LeadFormSection ref={undefined} />
       <FloatingCta visible={showFloating} />
 
       <footer className="border-t border-gold py-8 px-4 text-center">
