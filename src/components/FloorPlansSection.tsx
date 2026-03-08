@@ -106,12 +106,14 @@ const FloorPlansSection = ({ onCtaClick }: FloorPlansSectionProps) => {
               </ul>
             </div>
 
-            <button
-              onClick={onCtaClick}
-              className="bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity w-full md:w-auto"
+            <a
+              href="https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity w-full md:w-auto text-center"
             >
-              Solicitar Informações
-            </button>
+              Agende uma visita
+            </a>
           </div>
         </div>
       </div>
