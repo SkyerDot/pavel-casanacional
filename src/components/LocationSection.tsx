@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import aerialImg from "@/assets/aerial-view.jpg";
 
 const distances = [
+  { place: "Morumbi Shopping", time: "700m" },
   { place: "Av. Roque Petroni Jr.", time: "2 min" },
   { place: "Estação Brooklin", time: "3 min" },
   { place: "Av. Eng. Luís Carlos Berrini", time: "4 min" },
@@ -25,11 +26,14 @@ const LocationSection = () => {
               Brooklin, o protagonista da cidade.
             </h2>
             <p className="text-muted-foreground font-light leading-relaxed mb-3 text-sm">
-              Rua Diogo de Quadros, 440 — paralelo à Av. Roque Petroni Jr., cercado dos melhores acessos. 
-              A 700m do Morumbi Shopping.
+              Rua Diogo de Quadros, 440 — entre o Morumbi Shopping e a Av. Roque Petroni Jr., 
+              seu legado atemporal tipicamente brasileiro.
+            </p>
+            <p className="text-muted-foreground font-light leading-relaxed mb-3 text-sm">
+              Mais de 1.600 empresas de grande porte na região, incluindo Microsoft, Samsung, Nestlé, Oracle e outras.
             </p>
             <p className="text-muted-foreground font-light leading-relaxed mb-8 text-sm">
-              Mais de 1.600 empresas de grande porte na região, incluindo Microsoft, Samsung, Nestlé, Oracle e outras.
+              Central de atendimento: Av. Roque Petroni Jr., 837.
             </p>
 
             <div className="space-y-3">
@@ -38,6 +42,16 @@ const LocationSection = () => {
                   <span className="text-secondary-foreground font-body text-sm">{d.place}</span>
                   <span className="text-primary font-display text-lg">{d.time}</span>
                 </div>
+              ))}
+            </div>
+
+            {/* Nearby services */}
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+              {["Academias", "Bancos", "Ensino", "Farmácias", "Hospitais", "Padarias", "Shoppings", "Supermercados"].map((item) => (
+                <p key={item} className="flex items-center gap-2 text-sm text-muted-foreground font-body">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+                  {item}
+                </p>
               ))}
             </div>
           </motion.div>

@@ -1,20 +1,30 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import planta114 from "@/assets/planta-114.jpg";
-import planta136 from "@/assets/planta-136.jpg";
+import planta114 from "@/assets/planta-tipo-114.jpg";
+import planta136 from "@/assets/planta-tipo-136.jpg";
 
 const plans = [
   {
     id: "114",
     title: "114 m² — 2 Suítes",
     img: planta114,
-    details: ["2 suítes", "2 vagas determinadas", "Living integrado ao terraço", "60 unidades + 2 gardens"],
+    details: [
+      "2 suítes",
+      "2 vagas determinadas",
+      "Living integrado ao terraço",
+      "60 unidades + 2 gardens",
+    ],
   },
   {
     id: "136",
     title: "136 m² — 3 Suítes",
     img: planta136,
-    details: ["3 suítes", "2 vagas determinadas", "Living integrado ao terraço", "120 unidades + 4 gardens"],
+    details: [
+      "3 suítes",
+      "2 vagas determinadas",
+      "Living integrado ao terraço",
+      "120 unidades + 4 gardens",
+    ],
   },
 ];
 
@@ -84,11 +94,15 @@ const FloorPlansSection = ({ onCtaClick }: FloorPlansSectionProps) => {
             <div className="glass-card p-6 mb-8">
               <p className="text-sm text-muted-foreground font-body mb-1">Diferenciais privativos</p>
               <ul className="text-sm text-secondary-foreground font-body space-y-2 mt-3">
-                <li>• Elevador privativo para todas as unidades</li>
+                <li>• Hall social com elevador privativo para todas as unidades</li>
                 <li>• Pé-direito de 2,88m</li>
-                <li>• Kit automação de persianas</li>
-                <li>• Infraestrutura para ar-condicionado</li>
+                <li>• Kit infraestrutura para ar-condicionado</li>
+                <li>• Cozinha entregue com 2 cubas</li>
+                <li>• Ralo linear no terraço social</li>
                 <li>• Tomadas USB-C</li>
+                <li>• Kit automação de persianas</li>
+                <li>• Áreas comuns entregues equipadas e decoradas</li>
+                <li>• Serviços Pay-Per-Use</li>
               </ul>
             </div>
 

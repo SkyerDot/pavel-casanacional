@@ -47,6 +47,9 @@ const Index = () => {
         <p className="text-xs text-muted-foreground font-body mt-2">
           EZTEC — Mais de 4 décadas construindo qualidade de vida.
         </p>
+        <p className="text-xs text-muted-foreground font-body mt-2">
+          Área do terreno: 3.690,43 m² · Rua Diogo de Quadros, 440 — Brooklin, São Paulo
+        </p>
       </footer>
     </div>
   );
