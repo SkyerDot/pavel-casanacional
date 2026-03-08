@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import livingImg from "@/assets/living-136.jpg";
-import terracoImg from "@/assets/terraco-136.jpg";
+import livingSmImg from "@/assets/living-114.jpg";
 
 const AboutSection = () => {
   return (
@@ -41,8 +41,8 @@ const AboutSection = () => {
           >
             <img src={livingImg} alt="Living do apartamento de 136 m²" className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
-              <p className="text-sm text-primary tracking-widest uppercase font-body">Decoração</p>
-              <p className="text-foreground font-display text-xl">Fernanda Marques</p>
+              <p className="text-sm text-primary tracking-widest uppercase font-body">136 m² · 3 Suítes</p>
+              <p className="text-foreground font-display text-xl">Living Integrado</p>
             </div>
           </motion.div>
 
@@ -53,10 +53,10 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative overflow-hidden aspect-[4/3]"
           >
-            <img src={terracoImg} alt="Terraço do apartamento de 136 m²" className="w-full h-full object-cover" />
+            <img src={livingSmImg} alt="Living do apartamento de 114 m²" className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
-              <p className="text-sm text-primary tracking-widest uppercase font-body">Arquitetura</p>
-              <p className="text-foreground font-display text-xl">LE Arquitetos</p>
+              <p className="text-sm text-primary tracking-widest uppercase font-body">114 m² · 2 Suítes</p>
+              <p className="text-foreground font-display text-xl">Amplitude e Conforto</p>
             </div>
           </motion.div>
         </div>
