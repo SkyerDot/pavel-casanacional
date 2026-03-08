@@ -7,27 +7,36 @@ import LocationSection from "@/components/LocationSection";
 import FloorPlansSection from "@/components/FloorPlansSection";
 import FloatingCta from "@/components/FloatingCta";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0";
-
 const Index = () => {
   const heroCtaRef = useRef<HTMLAnchorElement>(null);
-  const [showFloating, setShowFloating] = useState(false);
+  const floorCtaRef = useRef<HTMLAnchorElement>(null);
+  const [heroCtaHidden, setHeroCtaHidden] = useState(false);
+  const [floorCtaVisible, setFloorCtaVisible] = useState(false);
 
   useEffect(() => {
-    const el = heroCtaRef.current;
-    if (!el) return;
+    const heroEl = heroCtaRef.current;
+    const floorEl = floorCtaRef.current;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setShowFloating(!entry.isIntersecting),
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => setHeroCtaHidden(!entry.isIntersecting),
       { threshold: 0 }
     );
-    observer.observe(el);
-    return () => observer.disconnect();
+
+    const floorObserver = new IntersectionObserver(
+      ([entry]) => setFloorCtaVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+
+    if (heroEl) heroObserver.observe(heroEl);
+    if (floorEl) floorObserver.observe(floorEl);
+
+    return () => {
+      heroObserver.disconnect();
+      floorObserver.disconnect();
+    };
   }, []);
 
-  const openWhatsApp = () => {
-    window.open(WHATSAPP_URL, "_blank");
-  };
+  const showFloating = heroCtaHidden && !floorCtaVisible;
 
   return (
     <div className="bg-background min-h-screen">
@@ -36,7 +45,7 @@ const Index = () => {
       <AboutSection />
       <AmenitiesSection />
       <LocationSection />
-      <FloorPlansSection onCtaClick={openWhatsApp} />
+      <FloorPlansSection ctaRef={floorCtaRef} />
       <FloatingCta visible={showFloating} />
 
       <footer className="border-t border-gold py-8 px-4 text-center">

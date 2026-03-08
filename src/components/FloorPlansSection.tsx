@@ -3,6 +3,8 @@ import { useState } from "react";
 import planta114 from "@/assets/planta-tipo-114.jpg";
 import planta136 from "@/assets/planta-tipo-136.jpg";
 
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0";
+
 const plans = [
   {
     id: "114",
@@ -29,10 +31,10 @@ const plans = [
 ];
 
 interface FloorPlansSectionProps {
-  onCtaClick: () => void;
+  ctaRef: React.RefObject<HTMLAnchorElement>;
 }
 
-const FloorPlansSection = ({ onCtaClick }: FloorPlansSectionProps) => {
+const FloorPlansSection = ({ ctaRef }: FloorPlansSectionProps) => {
   const [active, setActive] = useState("136");
 
   const activePlan = plans.find((p) => p.id === active)!;
@@ -107,7 +109,8 @@ const FloorPlansSection = ({ onCtaClick }: FloorPlansSectionProps) => {
             </div>
 
             <a
-              href="https://api.whatsapp.com/send/?phone=5511995502261&text=Ol%C3%A1%2C+Paulo+Coelho.+Tenho+interesse+no+Casa+Nacional+e+gostaria+de+conhecer+as+unidades+dispon%C3%ADveis.+Pode+me+orientar%3F&type=phone_number&app_absent=0"
+              ref={ctaRef}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-8 py-4 hover:opacity-90 transition-opacity w-full md:w-auto text-center"
