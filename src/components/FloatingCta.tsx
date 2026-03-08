@@ -18,7 +18,7 @@ const FloatingCta = ({ visible }: FloatingCtaProps) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-6 py-4 shadow-lg hover:opacity-90 transition-opacity"
+          className="fixed bottom-6 right-6 z-50 bg-gold-gradient text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase px-6 py-4 shadow-lg hover:brightness-110"
           aria-label="Agende uma visita"
         >
           Agende uma visita
