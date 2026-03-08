@@ -7,10 +7,10 @@ import spaImg from "@/assets/spa.jpg";
 import terracoImg from "@/assets/terraco.jpg";
 
 const amenities = [
-  { img: rooftopImg, title: "Piscina Rooftop", desc: "A mais de 100m de altura" },
+  { img: rooftopImg, title: "Piscina Adulto Rooftop", desc: "A mais de 100m de altura, no 36º pavimento" },
   { img: piscinaImg, title: "Piscina Coberta 25m", desc: "Lazer em qualquer estação" },
   { img: academiaImg, title: "Academia Completa", desc: "Equipamentos de ponta" },
-  { img: salaoImg, title: "Salão de Festas", desc: "Ambientes sofisticados" },
+  { img: salaoImg, title: "Salão de Festas", desc: "Térreo e 4º pavimento" },
   { img: spaImg, title: "Spa & Sauna", desc: "Bem-estar e relaxamento" },
   { img: terracoImg, title: "Terraço Gourmet", desc: "Integrado ao living" },
 ];
@@ -65,9 +65,11 @@ const AmenitiesSection = () => {
           <p className="text-primary text-sm tracking-widest uppercase mb-4 font-body">Também inclui</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-secondary-foreground font-body">
             {[
-              "Bar Rooftop", "Brinquedoteca", "Parque Infantil", "Jogos Adulto",
-              "Jogos Juvenil", "Espaço Pet", "Bicicletário", "Minimercado",
-              "Escritório Compartilhado", "Sala de Entregas", "Churrasqueira", "Espaço Bem-Estar",
+              "Bar Rooftop", "Solário Rooftop", "Brinquedoteca", "Parque Infantil",
+              "Piscina Infantil", "Jogos Adulto", "Jogos Juvenil", "Espaço Pet",
+              "Bicicletário", "Minimercado", "Escritório Compartilhado", "Sala de Entregas",
+              "Churrasqueira", "Espaço Bem-Estar", "Quadra de Esportes", "Espelho d'Água",
+              "Massagem", "Acesso/Portaria", "Serviços Pay-Per-Use",
             ].map((item) => (
               <p key={item} className="flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />

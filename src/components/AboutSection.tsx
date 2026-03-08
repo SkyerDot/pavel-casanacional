@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import paisagismoImg from "@/assets/paisagismo.jpg";
-import atrioImg from "@/assets/atrio.jpg";
+import livingImg from "@/assets/living-136.jpg";
+import terracoImg from "@/assets/terraco-136.jpg";
 
 const AboutSection = () => {
   return (
@@ -16,11 +16,17 @@ const AboutSection = () => {
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4 font-body">EZTEC · +40 anos de tradição</p>
           <h2 className="font-display text-3xl md:text-5xl mb-6 text-foreground">
-            Entre o verde e o concreto, a cidade desacelera.
+            O nosso habitat contemporâneo.
           </h2>
           <p className="text-muted-foreground font-light leading-relaxed">
-            Cores, curvas e geometria desenham o único recanto que guia olhar, emoção e pausa. 
-            Arquitetura, natureza e vida se misturam em um só movimento no Brooklin.
+            Entre o verde e o concreto, a cidade desacelera. A forma encontra sentido e a paisagem encontra espaço para permanecer. 
+            Agora no Brooklin, arquitetura, natureza e vida se misturam em um só movimento. As linhas de LE Arquitetos trazem 
+            amplitude e harmonia fluindo com o paisagismo singular.
+          </p>
+          <p className="text-muted-foreground font-light leading-relaxed mt-4">
+            Uma obra de arte pulsa no coração do projeto pelos traçados do Burle Marx Escritório de Paisagismo. 
+            Com materiais nobres, naturais e inspirações em nossa arte, os interiores assinados por Fernanda Marques 
+            completam a sofisticação contemporânea nacional.
           </p>
         </motion.div>
 
@@ -33,10 +39,10 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative overflow-hidden aspect-[4/3]"
           >
-            <img src={paisagismoImg} alt="Paisagismo Burle Marx" className="w-full h-full object-cover" />
+            <img src={livingImg} alt="Living do apartamento de 136 m²" className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
-              <p className="text-sm text-primary tracking-widest uppercase font-body">Paisagismo</p>
-              <p className="text-foreground font-display text-xl">Burle Marx Escritório</p>
+              <p className="text-sm text-primary tracking-widest uppercase font-body">Decoração</p>
+              <p className="text-foreground font-display text-xl">Fernanda Marques</p>
             </div>
           </motion.div>
 
@@ -47,10 +53,10 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative overflow-hidden aspect-[4/3]"
           >
-            <img src={atrioImg} alt="Átrio Casa Nacional" className="w-full h-full object-cover" />
+            <img src={terracoImg} alt="Terraço do apartamento de 136 m²" className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
-              <p className="text-sm text-primary tracking-widest uppercase font-body">Decoração</p>
-              <p className="text-foreground font-display text-xl">Fernanda Marques</p>
+              <p className="text-sm text-primary tracking-widest uppercase font-body">Arquitetura</p>
+              <p className="text-foreground font-display text-xl">LE Arquitetos</p>
             </div>
           </motion.div>
         </div>
@@ -67,7 +73,7 @@ const AboutSection = () => {
             { value: "188", label: "Unidades" },
             { value: "114-136", label: "m² privativos" },
             { value: "36", label: "Pavimentos" },
-            { value: "+100m", label: "Rooftop de altura" },
+            { value: "8", label: "Elevadores" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="font-display text-3xl md:text-4xl text-gold-gradient">{stat.value}</p>
