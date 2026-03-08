@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import vooRooftopImg from "@/assets/voo-rooftop-oficial.jpg";
+import aerialImg from "@/assets/pdf-aerial-view.jpg";
 
 const distances = [
   { place: "Morumbi Shopping", time: "700m" },
@@ -62,7 +62,7 @@ const LocationSection = () => {
             viewport={{ once: true }}
             className="relative aspect-square overflow-hidden"
           >
-            <img src={vooRooftopImg} alt="Vista aérea do Casa Nacional Brooklin" className="w-full h-full object-cover" />
+            <img src={aerialImg} alt="Vista aérea do Brooklin - São Paulo" className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </div>
