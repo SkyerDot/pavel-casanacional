@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import rooftopImg from "@/assets/rooftop-pool-oficial.jpg";
-import spaImg from "@/assets/spa-oficial.jpg";
-import saunaImg from "@/assets/sauna-oficial.jpg";
-import solarioImg from "@/assets/solario-rooftop-oficial.jpg";
-import acessoImg from "@/assets/acesso-oficial.jpg";
-import quadraImg from "@/assets/quadra-oficial.jpg";
+import rooftopImg from "@/assets/pdf-piscina-rooftop.jpg";
+import academiaImg from "@/assets/pdf-academia.jpg";
+import salaoImg from "@/assets/pdf-salao-festas.jpg";
+import spaImg from "@/assets/pdf-spa.jpg";
+import piscinaImg from "@/assets/pdf-piscina-coberta.jpg";
+import churrasqueiraImg from "@/assets/pdf-churrasqueira.jpg";
 
 const amenities = [
   { img: rooftopImg, title: "Piscina Adulto Rooftop", desc: "A mais de 100m de altura, no 36º pavimento" },
+  { img: piscinaImg, title: "Piscina Coberta 25m", desc: "Lazer em qualquer estação" },
+  { img: academiaImg, title: "Academia Completa", desc: "Equipamentos de ponta no rooftop" },
+  { img: salaoImg, title: "Salão de Festas", desc: "Térreo e 4º pavimento" },
   { img: spaImg, title: "Spa", desc: "Bem-estar e relaxamento" },
-  { img: saunaImg, title: "Sauna", desc: "Espaço de descompressão" },
-  { img: solarioImg, title: "Solário Rooftop", desc: "Vista panorâmica de São Paulo" },
-  { img: quadraImg, title: "Quadra de Esportes", desc: "Espaço completo para atividades" },
-  { img: acessoImg, title: "Acesso & Portaria", desc: "Hall com elevador privativo" },
+  { img: churrasqueiraImg, title: "Churrasqueira", desc: "Espaço gourmet integrado" },
 ];
 
 const AmenitiesSection = () => {
@@ -65,11 +65,11 @@ const AmenitiesSection = () => {
           <p className="text-primary text-sm tracking-widest uppercase mb-4 font-body">Também inclui</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-secondary-foreground font-body">
             {[
-              "Bar Rooftop", "Piscina Coberta 25m", "Academia Completa", "Salão de Festas",
+              "Bar Rooftop", "Solário Rooftop", "Sauna", "Massagem",
               "Brinquedoteca", "Parque Infantil", "Piscina Infantil", "Jogos Adulto",
               "Jogos Juvenil", "Espaço Pet", "Bicicletário", "Minimercado",
-              "Escritório Compartilhado", "Sala de Entregas", "Churrasqueira", "Espaço Bem-Estar",
-              "Espelho d'Água", "Massagem", "Terraço Gourmet", "Serviços Pay-Per-Use",
+              "Escritório Compartilhado", "Sala de Entregas", "Espaço Bem-Estar", "Quadra de Esportes",
+              "Espelho d'Água", "Praça Arquibancada", "Terraço Gourmet", "Serviços Pay-Per-Use",
             ].map((item) => (
               <p key={item} className="flex items-center gap-2">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
