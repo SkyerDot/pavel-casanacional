@@ -5,6 +5,8 @@ import AboutSection from "@/components/AboutSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import LocationSection from "@/components/LocationSection";
 import FloorPlansSection from "@/components/FloorPlansSection";
+import EbookSection from "@/components/EbookSection";
+import MapSection from "@/components/MapSection";
 import FloatingCta from "@/components/FloatingCta";
 
 const Index = () => {
