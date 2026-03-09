@@ -5,6 +5,8 @@ import AboutSection from "@/components/AboutSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import LocationSection from "@/components/LocationSection";
 import FloorPlansSection from "@/components/FloorPlansSection";
+import EbookSection from "@/components/EbookSection";
+import MapSection from "@/components/MapSection";
 import FloatingCta from "@/components/FloatingCta";
 
 const Index = () => {
@@ -46,6 +48,8 @@ const Index = () => {
       <AmenitiesSection />
       <LocationSection />
       <FloorPlansSection ctaRef={floorCtaRef} />
+      <EbookSection />
+      <MapSection />
       <FloatingCta visible={showFloating} />
 
       <footer className="border-t border-gold py-8 px-4 text-center">
