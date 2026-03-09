@@ -48,6 +48,8 @@ const Index = () => {
       <AmenitiesSection />
       <LocationSection />
       <FloorPlansSection ctaRef={floorCtaRef} />
+      <EbookSection />
+      <MapSection />
       <FloatingCta visible={showFloating} />
 
       <footer className="border-t border-gold py-8 px-4 text-center">
