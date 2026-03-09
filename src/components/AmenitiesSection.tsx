@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import rooftopImg from "@/assets/pdf-piscina-rooftop.jpg";
 import academiaImg from "@/assets/pdf-academia.jpg";
 import salaoImg from "@/assets/pdf-salao-festas.jpg";
-import spaImg from "@/assets/pdf-spa.jpg";
+import spaImg from "@/assets/sauna-oficial.jpg";
 import piscinaImg from "@/assets/pdf-piscina-coberta.jpg";
 import churrasqueiraImg from "@/assets/pdf-churrasqueira.jpg";
 
