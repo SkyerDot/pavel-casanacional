@@ -12,8 +12,8 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center mb-16"
-        >
+          className="max-w-3xl mx-auto text-center mb-16">
+          
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4 font-body">EZTEC · +40 anos de tradição</p>
           <h2 className="font-display text-3xl md:text-5xl mb-6 text-foreground">
             O nosso habitat contemporâneo.
@@ -37,8 +37,8 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative overflow-hidden aspect-[4/3]"
-          >
+            className="relative overflow-hidden aspect-[4/3]">
+            
             <img src={livingImg} alt="Living do apartamento de 136 m²" className="w-full h-full object-cover" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
               <p className="text-sm text-primary tracking-widest uppercase font-body">Decoração</p>
@@ -51,9 +51,9 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative overflow-hidden aspect-[4/3]"
-          >
-            <img src={atrioImg} alt="Átrio Casa Nacional com painel Burle Marx" className="w-full h-full object-cover" />
+            className="relative overflow-hidden aspect-[4/3]">
+            
+            <img alt="Átrio Casa Nacional com painel Burle Marx" className="w-full h-full object-cover" src="/lovable-uploads/8b1a7788-f7d5-4e1d-a1d0-2e62d19d8716.jpg" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
               <p className="text-sm text-primary tracking-widest uppercase font-body">Paisagismo</p>
               <p className="text-foreground font-display text-xl">Burle Marx Escritório</p>
@@ -67,23 +67,23 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 border-t border-gold pt-12"
-        >
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 border-t border-gold pt-12">
+          
           {[
-            { value: "188", label: "Unidades" },
-            { value: "114-136", label: "m² privativos" },
-            { value: "36", label: "Pavimentos" },
-            { value: "8", label: "Elevadores" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
+          { value: "188", label: "Unidades" },
+          { value: "114-136", label: "m² privativos" },
+          { value: "36", label: "Pavimentos" },
+          { value: "8", label: "Elevadores" }].
+          map((stat) =>
+          <div key={stat.label} className="text-center">
               <p className="font-display text-3xl md:text-4xl text-gold-gradient">{stat.value}</p>
               <p className="text-muted-foreground text-sm mt-2 font-body">{stat.label}</p>
             </div>
-          ))}
+          )}
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
