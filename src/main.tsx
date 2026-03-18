@@ -1,11 +1,5 @@
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-import { useEffect } from "react";
-
-function RootWithTitle() {
-	useEffect(() => {
-		document.title = "Casa Nacional - Paulo Coelho";
-	}, []);
-	return <App />;
-}
-
-createRoot(document.getElementById("root")!).render(<RootWithTitle />);
+createRoot(document.getElementById("root")!).render(<App />);
