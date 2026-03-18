@@ -53,7 +53,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative overflow-hidden aspect-[4/3]">
             
-            <img alt="Átrio Casa Nacional com painel Burle Marx" className="w-full h-full object-cover" src="/lovable-uploads/8b1a7788-f7d5-4e1d-a1d0-2e62d19d8716.jpg" />
+            <img alt="Átrio Casa Nacional com painel Burle Marx" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}lovable-uploads/8b1a7788-f7d5-4e1d-a1d0-2e62d19d8716.jpg`} />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
               <p className="text-sm text-primary tracking-widest uppercase font-body">Paisagismo</p>
               <p className="text-foreground font-display text-xl">Burle Marx Escritório</p>

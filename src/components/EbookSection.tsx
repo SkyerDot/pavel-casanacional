@@ -47,7 +47,7 @@ const EbookSection = () => {
           className="w-full h-[600px] rounded-lg overflow-hidden border border-gold shadow-lg bg-card"
         >
           <iframe
-            src="/ebook-casa-nacional.pdf"
+            src={`${import.meta.env.BASE_URL}ebook-casa-nacional.pdf`}
             width="100%"
             height="100%"
             title="E-book Casa Nacional EZTEC"
